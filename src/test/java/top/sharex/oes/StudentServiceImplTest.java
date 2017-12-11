@@ -88,7 +88,7 @@ public void testGetExamChoiceResults() throws Exception {
 */ 
 @Test
 public void testSubmit() throws Exception {
-    Exam exam = studentService.generateExamFromPool("测试", 1);
+    Exam exam = studentService.generateExamFromPool("测试", 2);
     List<QuestionInMemory> questionInMemoryList = exam.getQuestionInMemoryList();
     for(QuestionInMemory questionInMemory:questionInMemoryList){
         List<Choice> choices = questionInMemory.getChoices();

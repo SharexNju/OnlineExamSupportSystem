@@ -143,7 +143,9 @@ public class StudentServiceImpl implements StudentService {
         List<QuestionInMemory> questionInMemoryList = exam.getQuestionInMemoryList();
         int totalScore = 0;
         for(QuestionInMemory questionInMemory:questionInMemoryList){
+
             List<top.sharex.oes.domain.Choice> choices = questionInMemory.getChoices();
+
             //单选题
             if(questionInMemory.getType() == (byte)0){
                 for(top.sharex.oes.domain.Choice choiceInMemory:choices){
@@ -153,19 +155,29 @@ public class StudentServiceImpl implements StudentService {
                 }
             }else {//多选题
                 List<top.sharex.oes.domain.Choice> choseChoices = new ArrayList<>();
+                List<top.sharex.oes.domain.Choice> correctChoices = new ArrayList<>();
                 boolean isAllCorrect = true;
                 for(top.sharex.oes.domain.Choice choiceInMemory:choices){
                     //选择了的选项
                     if(choiceInMemory.getIsChoosed()){
                         choseChoices.add(choiceInMemory);
                     }
-                }
-                for(top.sharex.oes.domain.Choice choice:choseChoices){
-                    if(!(choice.getIsCorrect())){
-                        isAllCorrect = false;
-                        break;
+                    //正确的选项
+                    if(choiceInMemory.getIsCorrect()){
+                        correctChoices.add(choiceInMemory);
                     }
                 }
+                if(choseChoices.size() != correctChoices.size()){
+                    isAllCorrect = false;
+                }else{
+                    for(top.sharex.oes.domain.Choice choice:choseChoices){
+                        if(!(choice.getIsCorrect())){
+                            isAllCorrect = false;
+                            break;
+                        }
+                    }
+                }
+
                 if(isAllCorrect){
                     totalScore+=questionInMemory.getScore();
                 }
