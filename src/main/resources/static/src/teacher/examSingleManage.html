@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+@@include('../include/head.html', {
+"title": "考试管理 OnlineExamSupportSystem"
+})
+<body>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            @@include('../include/headerWithBack.html', {
+            "headName": "成绩单"
+            })
+
+
+            <!-- 成绩单 -->
+            <section>
+
+                <div class="table-wrapper">
+                    <div class="row uniform">
+                        <div class="12u$">
+                            <ul class="actions">
+                                <li><input type="submit" value="批量导出试卷" class="special big"/></li>
+                            </ul>
+                        </div>
+
+                        <!--说明：-->
+                        <!--1.默认以学号排序；-->
+                        <!--2.若缺考则显示0分，并备注“缺考”；-->
+                        <!--3.点击一行可以进入该考生详细试卷页面；-->
+                        <!--4.本页面将所有名单显示在一张页面内；-->
+
+                        <!-- mockData -->
+                        <!-- break -->
+                        <div class="12u$">
+                            <h3>考试名称：软件过程与管理&nbsp;&nbsp;考试时间：2017.11.27 16:00-18:00 &nbsp;&nbsp; 参考人数：210 &nbsp;&nbsp;
+                                平均分：59.99</h3>
+                        </div>
+                        <!-- Break -->
+                        <div class="12u$">
+                            <table class="alt" id="examStdsList">
+                                <thead>
+                                <tr>
+                                    <th>姓名</th>
+                                    <th>学号</th>
+                                    <th>班级</th>
+                                    <th>成绩</th>
+                                    <th>选项</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><a href="examStdManage.html">白国锋</a></td>
+                                    <td>141250001</td>
+                                    <td>1</td>
+                                    <td>90</td>
+                                    <td class="examExport"><a href="" class="">导出试卷</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>陈建斌</td>
+                                    <td>141250002</td>
+                                    <td>1</td>
+                                    <td>90</td>
+                                    <td class="examExport"><a href="" class="">导出试卷</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>李荣浩</td>
+                                    <td>141250003</td>
+                                    <td>1</td>
+                                    <td>90</td>
+                                    <td class="examExport"><a href="" class="">导出试卷</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>陈沐恩</td>
+                                    <td>141250004</td>
+                                    <td>1</td>
+                                    <td>90</td>
+                                    <td class="examExport"><a href="" class=" ">导出试卷</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>杨晨林</td>
+                                    <td>141250005</td>
+                                    <td>1</td>
+                                    <td>90</td>
+                                    <td class="examExport"><a href="" class=" ">导出试卷</a>
+                                    </td>
+                                </tr>
+                                </tbody>
+
+                                </tfoot>
+                            </table>
+                        </div>
+                        <!-- Break -->
+                        <div class="12u$">
+                            <!-- space -->
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </div>
+    </div>
+
+    @@include('../include/sidebar.html')
+
+</div>
+
+@@include('../include/scripts.html')
+
+</body>
+</html>

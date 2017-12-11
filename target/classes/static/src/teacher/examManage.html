@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+@@include('../include/head.html', {
+"title": "考试管理 OnlineExamSupportSystem"
+})
+<body>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+
+            @@include('../include/header.html', {
+            "headName": "考试管理"
+            })
+
+            <section>
+                <ul class="actions">
+                    <li><a href="examAdd.html" class="button big">新增考试</a></li>
+                </ul>
+
+                <!--说明：-->
+                <!--1.考试列表会将未开始的考试置顶，未开始的状态会用不同颜色的单元格表示；-->
+                <!--2.点击一场已完成的考试可以进入考试成绩单界面；点击一场未开始的考试可以修改考试细节（和新增考试页面类似）；-->
+                <!--3.考试场次多于一页时分页显示，保证页面不会高于浏览器高度；-->
+
+                <!-- mockdata -->
+                <div class="table-wrapper">
+                    <table class="alt" id="examList">
+                        <thead>
+                        <tr>
+                            <th>考试名称</th>
+                            <th>考试时间</th>
+                            <th>参考人数</th>
+                            <th>状态</th>
+                            <th>平均分</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><a href="examSingleManage.html">软件过程与管理期末考试</a></td>
+                            <td>2017.11.27 16:00-18:00</td>
+                            <td>210</td>
+                            <td>未开始</td>
+                            <td>---</td>
+                        </tr>
+                        <tr>
+                            <td>人机交互的软件工程方法期末考试</td>
+                            <td>2017.6.27 16:00-18:00</td>
+                            <td>210</td>
+                            <td>已结束</td>
+                            <td>89.12</td>
+                        </tr>
+                        <tr>
+                            <td>软件需求工程期末考试</td>
+                            <td>2017.11.27 16:00-18:00</td>
+                            <td>210</td>
+                            <td>已结束</td>
+                            <td>80.22</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+
+
+        </div>
+    </div>
+
+    @@include('../include/sidebar.html')
+
+</div>
+
+@@include('../include/scripts.html')
+</body>
+</html>

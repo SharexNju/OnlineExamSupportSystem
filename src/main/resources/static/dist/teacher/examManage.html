@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>考试管理 OnlineExamSupportSystem</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="../assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="../assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="../assets/css/ie8.css" /><![endif]-->
+	</head>
+<body>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+
+            <!--不带返回功能的标题栏-->
+<header id="header">
+	<h1 href="index.html" class="logo">考试管理</h1>
+</header>
+
+            <section>
+                <ul class="actions">
+                    <li><a href="examAdd.html" class="button big">新增考试</a></li>
+                </ul>
+
+                <!--说明：-->
+                <!--1.考试列表会将未开始的考试置顶，未开始的状态会用不同颜色的单元格表示；-->
+                <!--2.点击一场已完成的考试可以进入考试成绩单界面；点击一场未开始的考试可以修改考试细节（和新增考试页面类似）；-->
+                <!--3.考试场次多于一页时分页显示，保证页面不会高于浏览器高度；-->
+
+                <!-- mockdata -->
+                <div class="table-wrapper">
+                    <table class="alt" id="examList">
+                        <thead>
+                        <tr>
+                            <th>考试名称</th>
+                            <th>考试时间</th>
+                            <th>参考人数</th>
+                            <th>状态</th>
+                            <th>平均分</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><a href="examSingleManage.html">软件过程与管理期末考试</a></td>
+                            <td>2017.11.27 16:00-18:00</td>
+                            <td>210</td>
+                            <td>未开始</td>
+                            <td>---</td>
+                        </tr>
+                        <tr>
+                            <td>人机交互的软件工程方法期末考试</td>
+                            <td>2017.6.27 16:00-18:00</td>
+                            <td>210</td>
+                            <td>已结束</td>
+                            <td>89.12</td>
+                        </tr>
+                        <tr>
+                            <td>软件需求工程期末考试</td>
+                            <td>2017.11.27 16:00-18:00</td>
+                            <td>210</td>
+                            <td>已结束</td>
+                            <td>80.22</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+
+
+        </div>
+    </div>
+
+    <!--说明：-->
+<!--该侧边栏一直浮动显示在页面的左边，高度为浏览器的高度；-->
+<!-- Sidebar -->
+<div id="sidebar">
+    <div class="inner">
+
+
+        <!-- Menu -->
+        <nav id="menu">
+            <header class="major">
+                <h2><strong>在线考试支持系统</strong> OnlineExamSupportSystem</h2>
+            </header>
+            <ul>
+                <li><a href="examManage.html">考试管理</a></li>
+                <li><a href="courseManage.html">课程管理</a></li>
+                <li><a href="stdsManage.html">学生管理</a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <ul class="actions">
+                <li>
+                    <a href="login.html" class="button">退出登录</a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright">&copy; Untitled. All rights reserved. Design: <a href="https://html5up.net">HTML5
+                UP</a>&JerryZhang.</p>
+        </footer>
+
+    </div>
+</div>
+
+
+</div>
+
+<!-- Scripts -->
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/skel.min.js"></script>
+<script src="../assets/js/util.js"></script>
+<!--[if lte IE 8]><script src="../assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="../assets/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>完成考试 OnlineExamSupportSystem</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="../assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="../assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="../assets/css/ie8.css" /><![endif]-->
+	</head>
+<body>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+
+            <!--不带返回功能的标题栏-->
+<header id="header">
+	<h1 href="index.html" class="logo"><strong>在线考试支持系统</strong> OnlineExamSupportSystem</h1>
+</header>
+
+            <!-- Banner -->
+            <section id="banner">
+                <div class="content">
+                    <h2>恭喜你已完成考试，成绩单会在稍后发送到你的邮箱！</h2>
+                    <h3>该页面将在
+                        <span id="mes" style="color: #f45c5c">5</span>s
+                        后自动关闭，或点击这里
+                        <a href="javascript:window.opener=null;window.open('','_self');window.close();"
+                           style="color: #f45c5c">立即关闭</a></h3>
+                </div>
+
+                <span class="image textCenter">
+                    <!-- <i class="textCenter fa fa-graduation-cap " style="font-size: 20em; color: #f56a6a;" aria-hidden="true"></i> -->
+                </span>
+            </section>
+
+
+        </div>
+    </div>
+
+
+</div>
+
+<!-- Scripts -->
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/skel.min.js"></script>
+<script src="../assets/js/util.js"></script>
+<!--[if lte IE 8]><script src="../assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="../assets/js/main.js"></script>
+
+
+<script language="javascript" type="text/javascript">
+    var i = 5;
+    var intervalid;
+    intervalid = setInterval("fun()", 1000);
+
+    function fun() {
+        if (i == 0) {
+            window.opener = null;
+            window.open('', '_self');
+            window.close();
+            clearInterval(intervalid);
+        }
+        document.getElementById("mes").innerHTML = i;
+        i--;
+    }
+</script>
+
+</body>
+</html>

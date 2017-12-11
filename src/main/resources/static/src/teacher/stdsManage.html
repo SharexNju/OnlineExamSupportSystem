@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+@@include('../include/head.html', {
+"title": "学生管理 OnlineExamSupportSystem"
+})
+<body>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            @@include('../include/header.html', {
+            "headName": "学生管理"
+            })
+
+            <section>
+                <ul class="actions">
+                    <li><a href="#" class="button big">本地导入学生名单</a></li>
+                    <!--说明：-->
+                    <!--导入的格式由excel 模板给出，该模板可以下载-->
+                    <li><sub><a href="#">导入格式模板下载</a></sub></li>
+                </ul>
+
+                <div class="table-wrapper">
+                    <table class="alt" id="stdsList">
+                        <thead>
+                        <tr>
+                            <th>名单名称</th>
+                            <th>总人数</th>
+                            <th>创建日期</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><a href="stdsSingleManage.html">软件学院14级</a></td>
+                            <td>210</td>
+                            <td>2017.11.10 18:21:11</td>
+                        </tr>
+                        <tr>
+                            <td>软件学院15级</td>
+                            <td>210</td>
+                            <td>2017.11.10 18:21:11</td>
+                        </tr>
+                        <tr>
+                            <td>软件学院16级</td>
+                            <td>210</td>
+                            <td>2017.11.10 18:21:11</td>
+                        </tr>
+                        <tr>
+                            <td>软件学院17级</td>
+                            <td>210</td>
+                            <td>2017.11.10 18:21:11</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+
+
+        </div>
+    </div>
+
+    @@include('../include/sidebar.html')
+
+</div>
+
+@@include('../include/scripts.html')
+
+</body>
+</html>

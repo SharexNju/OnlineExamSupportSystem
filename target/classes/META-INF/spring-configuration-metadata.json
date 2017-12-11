@@ -1,0 +1,52 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "top.sharex.oes.config.EmailConfig",
+      "name": "email",
+      "type": "top.sharex.oes.config.EmailConfig"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "top.sharex.oes.config.EmailConfig",
+      "name": "email.host-address",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "top.sharex.oes.config.EmailConfig",
+      "name": "email.host-address",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "top.sharex.oes.config.EmailConfig",
+      "name": "email.password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "top.sharex.oes.config.EmailConfig",
+      "name": "email.password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "top.sharex.oes.config.EmailConfig",
+      "name": "email.sender-address",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "top.sharex.oes.config.EmailConfig",
+      "name": "email.sender-address",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "top.sharex.oes.config.EmailConfig",
+      "name": "email.username",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "top.sharex.oes.config.EmailConfig",
+      "name": "email.username",
+      "type": "java.lang.String"
+    }
+  ]
+}
