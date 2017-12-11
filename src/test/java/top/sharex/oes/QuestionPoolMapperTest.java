@@ -29,4 +29,10 @@ public class QuestionPoolMapperTest {
         System.out.println(new Gson().toJson(pools));
     }
 
+    @Test
+    public void testSelectByPoolName() {
+        ExamQuestionsPool examQuestionsPool = mapper.selectQuestionPoolByPoolName("测试");
+        System.out.println(new Gson().toJson(examQuestionsPool));
+    }
+
 }

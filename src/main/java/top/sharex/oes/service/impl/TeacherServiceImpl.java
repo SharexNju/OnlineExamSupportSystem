@@ -28,10 +28,13 @@ public class TeacherServiceImpl implements TeacherService {
     @Autowired
     EmailHelper emailHelper;
 
+    @Autowired
     ExamMapper examMapper;
 
+    @Autowired
     StudentMapper studentMapper;
 
+    @Autowired
     ExamQuestionsPoolMapper examQuestionsPoolMapper;
 
     /**

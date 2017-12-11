@@ -1,5 +1,7 @@
 package top.sharex.oes.service.impl;
 
+import com.google.gson.Gson;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import top.sharex.oes.dao.*;
 import top.sharex.oes.domain.Exam;
@@ -21,10 +23,15 @@ import java.util.Random;
 @Component
 public class StudentServiceImpl implements StudentService {
 
+    @Autowired
     ExamQuestionsPoolMapper examQuestionsPoolMapper;
+    @Autowired
     QuestionMapper questionMapper;
+    @Autowired
     ChoiceMapper choiceMapper;
+    @Autowired
     ExamMapper examMapper;
+    @Autowired
     ExamResultMapper examResultMapper;
 
 
@@ -45,9 +52,10 @@ public class StudentServiceImpl implements StudentService {
         singleRes.addAll(multiRes);
 
         List<QuestionInMemory> questionInMemoryList = new ArrayList<>();
-        List<top.sharex.oes.domain.Choice> choiceInMemoryList = new ArrayList<>();
+
         for(Question question:singleRes){
             List<Choice> choiceList = choiceMapper.selectChoicesByQuestionId(question.getId());
+            List<top.sharex.oes.domain.Choice> choiceInMemoryList = new ArrayList<>();
 
             for(Choice choice : choiceList){
                 top.sharex.oes.domain.Choice choiceInMemory = new top.sharex.oes.domain.Choice();
@@ -131,6 +139,7 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public void submit(Exam exam) {
+
         List<QuestionInMemory> questionInMemoryList = exam.getQuestionInMemoryList();
         int totalScore = 0;
         for(QuestionInMemory questionInMemory:questionInMemoryList){
@@ -167,7 +176,7 @@ public class StudentServiceImpl implements StudentService {
 
         ExamResult examResult = new ExamResult();
         examResult.setExamId(exam.getExamId());
-        examResult.setExamText(exam.getTitle());
+        examResult.setExamText(new Gson().toJson(exam));
         examResult.setScore(totalScore);
         examResult.setStudentId(exam.getStudentId());
 

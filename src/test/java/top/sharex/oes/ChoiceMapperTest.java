@@ -39,4 +39,10 @@ public class ChoiceMapperTest {
         System.out.println(new Gson().toJson(exam));
     }
 
+    @Test
+    public void testSelectByQuestionId() {
+        List<Choice> pools = mapper.selectChoicesByQuestionId(3);
+        System.out.println(new Gson().toJson(pools));
+    }
+
 }
